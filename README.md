@@ -1,6 +1,6 @@
 # Kiarina Sites
 
-Public project pages published with GitHub Pages.
+Static project pages published directly from the repository root with GitHub Pages.
 
 ## Routes
 
@@ -17,11 +17,9 @@ https://kiarina.github.io/sites/tokyo-canvas/
 ## Development
 
 ```bash
-npm install
-npm run dev
-npm run build
-npm run build:pages
+python3 -m http.server 8000
 ```
 
-`npm run build` verifies the application build. `npm run build:pages` creates the
-static `out/` directory deployed by `.github/workflows/pages.yml`.
+Open `http://localhost:8000/`. No build step or package installation is required.
+
+GitHub Pages should use `main` and `/(root)` as its publishing source.
