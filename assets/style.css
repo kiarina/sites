@@ -225,6 +225,7 @@ a {
 
 .manifesto,
 .feature-section,
+.gallery-section,
 .vroid-section,
 .status-section {
   padding: clamp(5rem, 11vw, 10rem) clamp(1.25rem, 7vw, 6rem);
@@ -292,6 +293,123 @@ a {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2rem;
   font-weight: 400;
+}
+
+.gallery-section {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.gallery-section .section-heading {
+  max-width: 980px;
+}
+
+.gallery-lead {
+  max-width: 720px;
+  margin: 2rem 0 0 auto;
+  color: rgba(243, 240, 232, 0.72);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.experience-gallery {
+  display: grid;
+  gap: clamp(5rem, 11vw, 10rem);
+  margin-top: clamp(4rem, 9vw, 7rem);
+}
+
+.experience-story figure,
+.camera-grid figure {
+  margin: 0;
+}
+
+.experience-shot {
+  overflow: hidden;
+  border: 1px solid rgba(243, 240, 232, 0.45);
+  background: #080c0b;
+}
+
+.experience-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.experience-copy {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.3fr) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 3rem);
+  max-width: 1050px;
+  margin-top: 1.5rem;
+}
+
+.experience-number {
+  margin: 0;
+  color: var(--coral);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.experience-copy h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 3.4vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.experience-copy div > p {
+  max-width: 680px;
+  margin: 1rem 0 0;
+  color: rgba(243, 240, 232, 0.75);
+}
+
+.experience-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.experience-pair .experience-copy {
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+}
+
+.experience-pair .experience-copy h3 {
+  font-size: clamp(1.7rem, 2.8vw, 2.5rem);
+}
+
+.experience-story-tools {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+}
+
+.experience-copy-before {
+  margin: 0 0 clamp(2rem, 5vw, 3.5rem);
+}
+
+.camera-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.75rem);
+}
+
+.camera-grid figcaption {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  color: rgba(243, 240, 232, 0.72);
+  font-size: 0.82rem;
+}
+
+.camera-grid figcaption span:first-child {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--coral);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
 }
 
 .vroid-section {
@@ -409,6 +527,12 @@ a {
 }
 
 @media (max-width: 760px) {
+  .site-nav {
+    right: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.45rem 1rem;
+  }
+
   .project-card,
   .manifesto,
   .vroid-section,
@@ -426,6 +550,20 @@ a {
 
   .feature-grid {
     grid-template-columns: 1fr;
+  }
+
+  .experience-pair,
+  .camera-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-copy {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .experience-gallery {
+    gap: 5rem;
   }
 
   .feature-card {
