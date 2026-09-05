@@ -15,8 +15,9 @@ https://kiarina.github.io/sites/
 ```
 
 The Tokyo Canvas site moved to its own domain and is now maintained in the
-Tokyo Canvas repository. The paths under `/tokyo-canvas/` keep only a redirect
-notice and a `canonical` link so previously published URLs stay reachable:
+Tokyo Canvas repository. The project index links straight to the new domain, and
+the paths under `/tokyo-canvas/` keep only a redirect notice and a `canonical`
+link so previously published URLs stay reachable:
 
 ```text
 https://tokyocanvas.blazeworks.jp/
